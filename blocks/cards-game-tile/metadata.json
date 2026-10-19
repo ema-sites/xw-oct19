@@ -1,0 +1,21 @@
+{
+  "variantName": "cards-game-tile",
+  "baseBlock": "cards",
+  "canonicalModel": "collection",
+  "visualCharacteristics": {
+    "purpose": "grid of game/promo tiles with image, optional NEW badge or jackpot band, title, details and CTA",
+    "description": "Green rgb(170,186,10) heading strip with white H2; below, white background with a 2-column grid of shadowed game tiles (left, about 2/3) beside a right rail of 4 stacked promo images (right, about 1/3)."
+  },
+  "contentPattern": {
+    "structure": "one row per card: [image | text]. Text: optional lead paragraph before the heading (short text such as NEW becomes a corner badge; anything else, e.g. a jackpot amount, becomes a band over the image bottom), heading (title), description, optional draw details, CTA link as the last paragraph",
+    "variantDescriptor": "White shadowed game tiles in 2-column grid, image top with optional jackpot band/NEW corner badge, blue pill CTA"
+  },
+  "options": [],
+  "memberVariantIds": [],
+  "sourceUrl": "https://www.alc.ca/content/alc/en.html",
+  "sectionMetadata": {
+    "style": "heading-band-green split"
+  },
+  "usage": "Grid of game/promo tiles: image top with an optional NEW corner badge or jackpot band, title, description, draw details and a pill CTA.",
+  "reuseGuidance": "Author a lead paragraph before the heading for a badge (short text such as NEW) or jackpot band (amount). Use base cards for plain image/text cards."
+}

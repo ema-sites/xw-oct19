@@ -1,0 +1,21 @@
+{
+  "variantName": "carousel-winners",
+  "baseBlock": "carousel",
+  "canonicalModel": "collection",
+  "visualCharacteristics": {
+    "purpose": "rotating recent-winners slider with portrait, name, location, CTA, game logo and prize amount",
+    "description": "Solid blue rgb(0,157,219) heading strip with white H2 'Recent winners', followed by a light-blue patterned winners slider: circular portrait, name, location, CTA pill, game logo + 'Winner' label and large prize amount; side arrows and dots."
+  },
+  "contentPattern": {
+    "structure": "one row per slide: [portrait image | text]. Text: heading (winner name), location paragraph, paragraph with game logo image + \"Winner\", prize amount paragraph (e.g. $500,000), CTA link",
+    "variantDescriptor": "Light-blue patterned slider; circular portrait left, name/location/CTA centre, game logo + large prize amount right"
+  },
+  "options": [],
+  "memberVariantIds": [],
+  "sourceUrl": "https://www.alc.ca/content/alc/en.html",
+  "sectionMetadata": {
+    "style": "heading-band-blue"
+  },
+  "usage": "Rotating showcase of recent winners: circular portrait, winner name, location, CTA, game logo with Winner label and prize amount.",
+  "reuseGuidance": "Use for testimonial/winner style sliders with a portrait plus a highlighted figure. Place inside a section styled heading-band-blue to get the heading strip."
+}

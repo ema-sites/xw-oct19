@@ -1,0 +1,21 @@
+{
+  "variantName": "carousel-hero",
+  "baseBlock": "carousel",
+  "canonicalModel": "collection",
+  "visualCharacteristics": {
+    "purpose": "full-bleed rotating promo banner of image-only slides with a control bar (prev, dots, next) below",
+    "description": "Full-bleed rotating promo banner (about 1280x470); the artwork carries all text. Grey control bar below with prev/next arrows and 5 dots."
+  },
+  "contentPattern": {
+    "structure": "one row per slide: [image | text with a CTA link]. The link covers the whole slide; its text is visually hidden because the artwork carries the message",
+    "variantDescriptor": "Full-bleed image-only promo slides with text baked into artwork, bottom control bar with arrows and dots"
+  },
+  "options": [],
+  "memberVariantIds": [],
+  "sourceUrl": "https://www.alc.ca/content/alc/en.html",
+  "sectionMetadata": {
+    "style": null
+  },
+  "usage": "Top-of-page rotating promo banner where each slide is a full-bleed artwork image with its message baked in; the CTA link covers the whole slide.",
+  "reuseGuidance": "Use for image-only promotional rotators. If slides need live text overlays, use the base carousel instead."
+}

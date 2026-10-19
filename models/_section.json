@@ -33,6 +33,18 @@
             {
               "name": "Highlight",
               "value": "highlight"
+            },
+            {
+              "name": "Heading Band Blue",
+              "value": "heading-band-blue"
+            },
+            {
+              "name": "Heading Band Green",
+              "value": "heading-band-green"
+            },
+            {
+              "name": "Split",
+              "value": "split"
             }
           ]
         }
@@ -46,17 +58,20 @@
         "accordion",
         "button",
         "cards",
+        "cards-game-tile",
         "carousel",
+        "carousel-hero",
+        "carousel-winners",
         "columns",
         "embed",
-        "fragment",
         "form",
+        "fragment",
         "hero",
         "image",
         "quote",
         "search",
-        "tabs",
         "table",
+        "tabs",
         "text",
         "title",
         "video"

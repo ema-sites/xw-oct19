@@ -1,0 +1,81 @@
+{
+  "metadata": {
+    "projectType": "xwalk"
+  },
+  "templates": [
+    {
+      "name": "alc",
+      "urls": [
+        "https://www.alc.ca/content/alc/en.html"
+      ],
+      "representativeUrl": "https://www.alc.ca/content/alc/en.html",
+      "description": "ALC home page: hero promo carousel, recent winners slider, featured game tiles with promo rail",
+      "urlPattern": "/content/alc/*",
+      "blocks": [
+        {
+          "name": "carousel-hero",
+          "instances": [
+            "div.carousel.list.parbase.hero",
+            ".alc-carousel"
+          ]
+        },
+        {
+          "name": "carousel-winners",
+          "instances": [
+            ".winners-carousel",
+            ".winners_carousel"
+          ]
+        },
+        {
+          "name": "cards-game-tile",
+          "instances": [
+            ".cmp-container--game-tiles"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "name": "Hero promo carousel",
+          "selector": [
+            "div.carousel.list.parbase.hero"
+          ],
+          "style": null,
+          "blocks": [
+            "carousel-hero"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-2",
+          "name": "Recent winners",
+          "selector": [
+            ".cmp-section-header--alc-blue"
+          ],
+          "style": "heading-band-blue",
+          "blocks": [
+            "carousel-winners"
+          ],
+          "defaultContent": [
+            ".cmp-section-header--alc-blue h2.cmp-section-header__title"
+          ]
+        },
+        {
+          "id": "section-3",
+          "name": "Featured games and promotions",
+          "selector": [
+            ".cmp-section-header--alc-green"
+          ],
+          "style": "heading-band-green, split",
+          "blocks": [
+            "cards-game-tile"
+          ],
+          "defaultContent": [
+            ".cmp-section-header--alc-green h2.cmp-section-header__title",
+            ".cmp-container--hide-column-gutters .cmp-image"
+          ]
+        }
+      ]
+    }
+  ]
+}

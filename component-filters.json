@@ -11,17 +11,20 @@
       "accordion",
       "button",
       "cards",
+      "cards-game-tile",
       "carousel",
+      "carousel-hero",
+      "carousel-winners",
       "columns",
       "embed",
-      "fragment",
       "form",
+      "fragment",
       "hero",
       "image",
       "quote",
       "search",
-      "tabs",
       "table",
+      "tabs",
       "text",
       "title",
       "video"
@@ -34,9 +37,27 @@
     ]
   },
   {
+    "id": "cards-game-tile",
+    "components": [
+      "cards-game-tile-item"
+    ]
+  },
+  {
     "id": "cards",
     "components": [
       "card"
+    ]
+  },
+  {
+    "id": "carousel-hero",
+    "components": [
+      "carousel-hero-item"
+    ]
+  },
+  {
+    "id": "carousel-winners",
+    "components": [
+      "carousel-winners-item"
     ]
   },
   {

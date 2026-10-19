@@ -1,0 +1,232 @@
+/*
+ * carousel-hero: full-bleed image-only promo carousel.
+ * Source: div.carousel.list.parbase.hero on alc.ca (1440 x 525 desktop,
+ * 1900 x 525 artwork anchored centre-bottom, 52px white 90% control bar
+ * overlaid on the bottom of the slide).
+ */
+
+.carousel-hero {
+  position: relative;
+  color: var(--text-color);
+}
+
+.carousel-hero .carousel-hero-slides-container {
+  position: relative;
+}
+
+.carousel-hero .carousel-hero-slides,
+.carousel-hero .carousel-hero-indicators {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.carousel-hero .carousel-hero-slides {
+  display: flex;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  overflow: scroll clip;
+  scrollbar-width: none;
+}
+
+.carousel-hero .carousel-hero-slides::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-hero .carousel-hero-slide {
+  position: relative;
+  flex: 0 0 100%;
+  width: 100%;
+  scroll-snap-align: start;
+}
+
+/* slide artwork */
+.carousel-hero .carousel-hero-slide-image,
+.carousel-hero .carousel-hero-slide-image p {
+  margin: 0;
+  line-height: 0;
+}
+
+.carousel-hero .carousel-hero-slide-image picture,
+.carousel-hero .carousel-hero-slide-image img {
+  display: block;
+  width: 100%;
+}
+
+/* keeps the source's 1440 x 525 crop of the 1900 x 525 artwork at every width */
+.carousel-hero .carousel-hero-slide-image img {
+  height: auto;
+  max-height: 525px;
+  aspect-ratio: 1440 / 525;
+  object-fit: cover;
+  object-position: 50% 100%;
+}
+
+/* the artwork carries the message; the CTA link covers the whole slide */
+.carousel-hero .carousel-hero-slide-content {
+  position: absolute;
+  inset: 0;
+}
+
+.carousel-hero .carousel-hero-slide-content > :not(:has(.carousel-hero-slide-link)) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.carousel-hero .carousel-hero-slide-content p:has(.carousel-hero-slide-link) {
+  margin: 0;
+}
+
+main .carousel-hero a.carousel-hero-slide-link:any-link {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  max-width: none;
+  min-height: 0;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  font-size: 0;
+  line-height: 0;
+  color: transparent;
+  background: transparent;
+  box-shadow: none;
+}
+
+main .carousel-hero a.carousel-hero-slide-link:any-link::after {
+  content: none;
+}
+
+main .carousel-hero a.carousel-hero-slide-link:focus-visible {
+  outline: 3px solid var(--brand-blue);
+  outline-offset: -3px;
+}
+
+/* control bar: [prev] [dots] [next]; content box matches the source's
+   1200px container with 5px side padding, centred in a full-width bar */
+.carousel-hero .carousel-hero-controls {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 52px;
+  padding: 0 max(5px, calc((100% - 1190px) / 2));
+  background-color: rgb(255 255 255 / 90%);
+}
+
+.carousel-hero .carousel-hero-indicators {
+  display: flex;
+  flex: 1 1 auto;
+  align-items: center;
+  justify-content: center;
+  height: 52px;
+}
+
+.carousel-hero .carousel-hero-indicator {
+  display: flex;
+}
+
+main .carousel-hero .carousel-hero-indicator button {
+  position: relative;
+  display: block;
+  flex: 0 0 44px;
+  width: 44px;
+  max-width: none;
+  height: 24px;
+  min-height: 0;
+  margin: 0 4px;
+  border: 0;
+  border-radius: 50%;
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
+  color: transparent;
+  cursor: pointer;
+  outline: 0;
+}
+
+main .carousel-hero .carousel-hero-indicator button::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--text-color);
+  transform: translate(-50%, -50%);
+}
+
+main .carousel-hero .carousel-hero-indicator button:disabled,
+main .carousel-hero .carousel-hero-indicator button:hover,
+main .carousel-hero .carousel-hero-indicator button:focus {
+  background: transparent;
+  cursor: pointer;
+}
+
+main .carousel-hero .carousel-hero-indicator button:disabled::after,
+main .carousel-hero .carousel-hero-indicator button:hover::after,
+main .carousel-hero .carousel-hero-indicator button:focus-visible::after {
+  background: var(--brand-blue);
+}
+
+main .carousel-hero .carousel-hero-prev,
+main .carousel-hero .carousel-hero-next {
+  position: relative;
+  display: block;
+  flex: 0 0 40px;
+  width: 40px;
+  max-width: none;
+  height: 52px;
+  min-height: 0;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  padding: 1px 6px;
+  background: transparent;
+  box-shadow: none;
+  color: var(--brand-blue);
+  cursor: pointer;
+}
+
+main .carousel-hero .carousel-hero-prev:hover,
+main .carousel-hero .carousel-hero-prev:focus,
+main .carousel-hero .carousel-hero-next:hover,
+main .carousel-hero .carousel-hero-next:focus {
+  background: transparent;
+  color: var(--brand-blue);
+}
+
+/* Material Icons keyboard_arrow_left / keyboard_arrow_right at 28px */
+main .carousel-hero .carousel-hero-prev::after,
+main .carousel-hero .carousel-hero-next::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 28px;
+  height: 28px;
+  background-color: currentcolor;
+  transform: translate(-50%, -50%);
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M15.41 16.59 10.83 12l4.58-4.59L14 6l-6 6 6 6z'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+main .carousel-hero .carousel-hero-next::after {
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6z'/%3E%3C/svg%3E");
+}
+
+@media (width >= 900px) {
+  /* desktop: bar overlays the bottom 52px of the 525px slide */
+  .carousel-hero .carousel-hero-controls {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+  }
+}

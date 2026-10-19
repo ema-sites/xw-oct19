@@ -1,0 +1,66 @@
+/*
+ * Brand tokens extracted from https://www.alc.ca/content/alc/en.html
+ * (see migration-work/brand.json)
+ */
+
+:root {
+  /* colors */
+  --background-color: #fff;
+  --light-color: #f4f6f8;
+  --dark-color: #01152b;
+  --text-color: #69727b;
+  --link-color: #006faf;
+  --link-hover-color: #005e95;
+  --overlay-background-color: lightgrey;
+
+  /* brand colors */
+  --brand-blue: #009ddb;
+  --brand-green: #aaba0a;
+  --brand-sky: #65baf7;
+  --brand-navy: #01152b;
+  --brand-royal: #0655aa;
+  --brand-yellow: #ffff1b;
+  --button-color: #006faf;
+  --button-hover-color: #007bc2;
+  --button-shadow: 0 3px 5px 0 rgb(0 82 155 / 10%);
+  --border-color: #d4dadf;
+  --card-shadow: 0 2px 8px -2px rgb(0 0 0 / 45%);
+
+  /* fonts */
+  --body-font-family: proxima-nova, proxima_nova, proxima-nova-fallback, helvetica, arial, sans-serif;
+  --heading-font-family: ubuntu, ubuntu-fallback, helvetica, arial, sans-serif;
+
+  /* body sizes */
+  --body-font-size-m: 16px;
+  --body-font-size-s: 16px;
+  --body-font-size-xs: 14px;
+  --body-line-height: 1.4286;
+
+  /* heading sizes (mobile) */
+  --heading-font-size-xxl: 36px;
+  --heading-font-size-xl: 28px;
+  --heading-font-size-l: 24px;
+  --heading-font-size-m: 20px;
+  --heading-font-size-s: 18px;
+  --heading-font-size-xs: 16px;
+
+  /* layout */
+  --content-max-width: 1160px;
+  --section-padding: 24px;
+  --nav-height: 70px;
+}
+
+@media (width >= 900px) {
+  :root {
+    /* heading sizes (desktop) */
+    --heading-font-size-xxl: 36px;
+    --heading-font-size-xl: 22px;
+    --heading-font-size-l: 20px;
+    --heading-font-size-m: 18px;
+    --heading-font-size-s: 16px;
+    --heading-font-size-xs: 14px;
+
+    /* header: 91px top bar + 50px nav bar */
+    --nav-height: 141px;
+  }
+}
